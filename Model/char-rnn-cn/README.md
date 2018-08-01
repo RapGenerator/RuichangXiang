@@ -1,20 +1,14 @@
 # char-rnn-cn
-基于char-rnn和tensorflow生成歌词
 这里是原来的博客地址 http://leix.me/2016/11/28/tensorflow-lyrics-generation/
-
+##运行环境 
+python3.6 tensorflow1.8
+##数据
+王诗俊处理过的带韵脚ang的那个文件TXT
 ## 训练
 `python3 gen_lyrics.py 0`
-
 ## 预测（生成歌词）
 `python3 gen_lyrics.py 1`
-
-## 可视化
-在当前目录下运行`tensorboard --logdir=logs`可以可视化：
-
-embedding visualization( TensorFlow Version > 0.12.0rc0 ) :
-
-![embedding](./embedding.png)
-
+## 结果
 下面是用`唱一首歌`当做初始化来预热LSTM模型，然后生成的歌词：
 ```
 唱

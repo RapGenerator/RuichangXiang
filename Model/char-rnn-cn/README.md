@@ -1,8 +1,6 @@
-# char-rnn-cn
-这里是原来的博客地址 http://leix.me/2016/11/28/tensorflow-lyrics-generation/
-##运行环境 
+## 运行环境 
 python3.6 tensorflow1.8
-##数据
+## 数据
 王诗俊处理过的带韵脚ang的那个文件TXT
 ## 训练
 `python3 gen_lyrics.py 0`

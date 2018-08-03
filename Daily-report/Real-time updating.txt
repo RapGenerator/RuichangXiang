@@ -1,14 +1,15 @@
-## 2018-08-01
-1.seq2seq基本概念的学习
-2.attention-based model基本概念的学习
-3.char-rnn-cn的例子下载后进行测试
-  rnn_cell代码部分小改后
-  training：正常
-  Sampling：异常 
-            出现错误百度后说是作用域，但其实代码上有作用域。
-            最后重新启动TensorFlow正常输出。
-
-4.char-rnn-cn的例子代码进行学习重写
+## 2018-08-03
+理解逻辑，剖析原因
+1.为什么需要seq2seq?
+机器翻译RNN（many to many）解决不了
+2.为什么需要attention？
+翻译过程中注意力不一样，歌词生成中押韵
+3.为什么需要BeamSearch？
+歌词生成中重复‘我爱我爱我’
+4.为什么需要bleu?
+歌词生成中语句通顺
+5.为什么需要分词？
+词向量，词的就不是单独的一个字
 
 ## 2018-08-02
 1.seq2seq程序（庞）进行分析，同时和‘吴亦凡’一起将整个程序的流程走了一遍
@@ -29,13 +30,18 @@
   RMSprop
   Adadelta
   Adam
-  
-## 2018-08-03
-理解逻辑，剖析原因
-1.为什么需要seq2seq?
-2.为什么需要attention？
-3.为什么需要BeamSearch？
-4.为什么需要bleu?
-5.为什么需要分词？
+
+## 2018-08-01
+1.seq2seq基本概念的学习
+2.attention-based model基本概念的学习
+3.char-rnn-cn的例子下载后进行测试
+  rnn_cell代码部分小改后
+  training：正常
+  Sampling：异常 
+            出现错误百度后说是作用域，但其实代码上有作用域。
+            最后重新启动TensorFlow正常输出。
+
+4.char-rnn-cn的例子代码进行学习重写
+
 
 

@@ -29,5 +29,13 @@
   RMSprop
   Adadelta
   Adam
+  
+## 2018-08-03
+理解逻辑，剖析原因
+1.为什么需要seq2seq?
+2.为什么需要attention？
+3.为什么需要BeamSearch？
+4.为什么需要bleu?
+5.为什么需要分词？
 
 

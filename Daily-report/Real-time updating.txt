@@ -1,3 +1,20 @@
+## 2018-08-04
+1.Seq2Seq的参数集合 
+超参数：
+口层 数 = n ， hidden size = d 
+口vocab for F =Vf ，vocab for E=Ve  
+Encoder ： 
+口 Input: Input embedding for f ：Vf * d
+口 LSTM:第 一 层 ， 第 二 层 ： n(8d*d + 4d)  
+Decoder: 
+口 Input inputembeddmg for e: Ve * d 
+口 LSTM 第 一 层 ， 第 二 层 : n(8d*d + 4d)  
+口 Output: 
+        Output embedding for e: Ve*d 
+        Output  bias for e: Ve 
+2.寻根溯源
+读第一篇论文-引出第二篇论文-引出第三篇论文-引出机器生成诗歌的综述-找到产业导师给的文献的源头
+
 ## 2018-08-03
 理解逻辑，剖析原因
 1.为什么需要seq2seq?

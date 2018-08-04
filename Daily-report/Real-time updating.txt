@@ -12,9 +12,7 @@ Decoder:
 口 Output: 
         output embedding for e: Ve*d 
         output  bias for e: Ve 
-2.寻根溯源
-读第一篇论文-引出第二篇论文-引出第三篇论文-引出机器生成诗歌的综述-找到产业导师给的文献的源头
-3.与孙石闲聊
+2.与孙石闲聊
 为什么来deecamp？学习一点机器学习深度学习
 为什么来歌词组？主要标题吸引，其实应该是来打酱油的
 

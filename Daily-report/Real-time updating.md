@@ -1,3 +1,24 @@
+## 2018-08-07    
+1. paper ' Chinese Poetry Generation with Planning based Neural Network ' 
+- Introduction: this paper proposes a poetry generating method which generates poems in a two-stage procedure:plans the sub-topic of each line, generate the poem line by line.
+- Keyword Extraction:TextRank algorithm
+- Keyword Expansion: RNNLM-based method,Knowledge-based method.
+- Poem Generation: the input consists of keywords and the previously generated text of the poem
+- Dateset:　quatrains corpus, baidu baike and wikipedia
+- Evaluation Metrics: for BLEU and METEOR have little correlation with human evaluation,use human evaluators
+- Baselines: SMT/RNNLM/RNNPG/ANMT are implimented with the same pre-processing method.
+- Results: the author's method outperforms all baseline models
+- Automatic Generation vs. Human Poet: the second kind of experiments
+- Conclusion: Keyword expansion method and keyword expansion method;the modified RNN model. 
+2. paper 'Skip-Thought Vectors'
+- Introduction: inspired by word2vec's skip-gram model, this paper encode a sentence to predict the sentences around it.The model is called skip-thoughts and vectors induced by the model are called skip-thought vectors.
+- Inducing skip-thought vectors: 
+  - Encoder: The last hidden state hNi represents the full sentence
+  - Decoder: Separate parameters are used for each decoder with the exception of the vocabulary matrix V
+  - Objective: the sum of the log-probabilities for the forward and backward sentences conditioned on the encoder representation
+- Vocabulary expansion:　For words not seen during training, constract a matrix W to map Vw2v-Vrnn
+- Experiments: evaluate skip-thoughts as a general feature extractor by reporting 8 tasks
+- Conclusion: the sentence encoder is unsupervised,generic and distributed; a vocabulary expansion method to encode words is introduced.
 ## 2018-08-06    
 1. paper ' Hafez: an Interactive Poetry Generation System '    
 - Introduction: this paper is based on author's previous poetry generation system called Hafez. please click [this website](http://52.24.230.241/poem/advance/),you will know what it is.Try to use the system by adjusting any style configurations.

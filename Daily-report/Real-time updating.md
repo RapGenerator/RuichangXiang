@@ -5,9 +5,9 @@
 - loss
 - optimazer
 - word2vec embedding
-2. Learn Tensorboard
+2. Learn Tensorboard            
 I had a test in my computer, when i did all the procedure, everything is ok except the final page can't be opened.After searching for a while, i found many misleading solutions,i tried it,but it didn't work.i realized that my program's path comprises chinese, then it worked.
-3. Count the fishes and ducks
+3. Count the fishes and ducks               
 Walking around the weiming lake in peking university(yi lu shi pang wang,in order of age) after lunch, wang told many knowledge about the big ancient bronze bell to us,reaping the endless applause.
 ## 2018-08-07    
 1. paper ' Chinese Poetry Generation with Planning based Neural Network ' 

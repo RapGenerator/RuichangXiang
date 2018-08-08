@@ -1,6 +1,6 @@
 ## 2018-08-08
 1. Learn TensorFlow on this [website](https://www.bilibili.com/video/av20542427/?p=4)
-- graphs/session/tensor/variabale
+- graphs/session/tensor/variable
 - a logistic regression's example
 - loss
 - optimazer

@@ -1,3 +1,79 @@
+## 2018-08-09
+1. seq2seq1.0
+- data_helper.py
+  - class Batch:encoder_inputs encoder_inputs_length decoder_targets decoder_targets_length         
+  - def load_and_cut_data(filepath):return data
+  - def create_dic_and_map(sources, targets):return sources_data, targets_data, word_to_id, id_to_word
+  - def createBatch(sources, targets):return batch        
+  - def getBatches(sources_data, targets_data, batch_size):return batches         
+  - def sentence2enco(sentence, word2id): return batch
+- model.py
+  - class Seq2SeqModel(object)
+    - def __init__(self, sess, rnn_size, num_layers, embedding_size, learning_rate, word_to_id, mode, use_attention,beam_search, beam_size, cell_type, max_gradient_norm, teacher_forcing, teacher_forcing_probability):
+    - def build_graph(self)
+      - def build_placeholder(self):
+      - def build_encoder(self):
+        - tf.nn.dynamic_rnn:
+          - tf.nn.embedding_lookup
+          - create_rnn_cell()
+            - MultiRNNCell
+              - single_rnn_cell
+                - DropoutWrapper
+                  - GRUCell(self.rnn_size) if self.cell_type == 'GRU' else LSTMCell(self.rnn_size)
+      - def build_decoder(self):
+        - build_train_decoder()
+          - build_optimizer()
+            - optimizer.apply_gradients
+              - tf.clip_by_global_norm
+              - tf.gradients
+              - tf.trainable_variables
+              - tf.train.AdamOptimizer
+            - sequence_loss
+              - tf.identity(decoder_outputs.rnn_output)
+                - dynamic_decode
+                  - BasicDecoder
+                    - ScheduledEmbeddingTrainingHelper if self.teacher_forcing else TrainingHelper
+                      - tf.nn.embedding_lookup
+                        - tf.concat
+                          - tf.strided_slice()
+              - build_predict_decoder()
+                - decoder_outputs.predicted_ids if beam_search else tf.expand_dims(decoder_outputs.sample_id, -1)
+                  - dynamic_decode(decoder=inference_decoder, maximum_iterations=50)
+                    - BasicDecoder+GreedyEmbeddingHelper if beam_search else BeamSearchDecoder
+              - output_layer = tf.layers.Dense
+              - build_decoder_cell()
+                - decoder_cell.zero_state
+                  - batch_size = self.batch_size if not self.beam_search else self.batch_size * self.beam_size
+                  - AttentionWrapper
+                    - create_rnn_cell
+                    - BahdanauAttention
+                      - tile_batch if self.beam_search
+                      - nest.map_structure if self.beam_search     
+    - def train(self, batch):
+      - _, loss, summary = self.sess.run([self.train_op, self.loss, self.summary_op], feed_dict=feed_dict)
+    - def eval(self, batch):
+      loss, summary = self.sess.run([self.loss, self.summary_op], feed_dict=feed_dict)
+    - def infer(self, batch):
+      - predict = self.sess.run(self.decoder_predict_decode, feed_dict=feed_dict)          
+  - train.py
+    - model.train(nextBatch)
+      - getBatches
+        - model.saver.restore 
+          - tf.train.get_checkpoint_state
+            -  model = Seq2SeqModel()
+        - create_dic_and_map
+          - load_and_cut_data
+  - predict.py
+    - predict_ids_to_seq
+      - model.infer(batch)
+        - sentence2enco
+          - sentence = sys.stdin.readline()
+            - model.saver.restore 
+              - tf.train.get_checkpoint_state
+                -  model = Seq2SeqModel()
+          - word_to_id=create_dic_and_map
+            - load_and_cut_data
+
 ## 2018-08-08
 1. Learn TensorFlow on this [website](https://www.bilibili.com/video/av20542427/?p=4)
 - graphs/session/tensor/variable

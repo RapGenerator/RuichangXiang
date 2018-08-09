@@ -36,19 +36,19 @@
                       - tf.nn.embedding_lookup
                         - tf.concat
                           - tf.strided_slice()
-              - build_predict_decoder()
-                - decoder_outputs.predicted_ids if beam_search else tf.expand_dims(decoder_outputs.sample_id, -1)
-                  - dynamic_decode(decoder=inference_decoder, maximum_iterations=50)
-                    - BasicDecoder+GreedyEmbeddingHelper if beam_search else BeamSearchDecoder
-              - output_layer = tf.layers.Dense
-              - build_decoder_cell()
-                - decoder_cell.zero_state
-                  - batch_size = self.batch_size if not self.beam_search else self.batch_size * self.beam_size
-                  - AttentionWrapper
-                    - create_rnn_cell
-                    - BahdanauAttention
-                      - tile_batch if self.beam_search
-                      - nest.map_structure if self.beam_search     
+        - build_predict_decoder()
+          - decoder_outputs.predicted_ids if beam_search else tf.expand_dims(decoder_outputs.sample_id, -1)
+            - dynamic_decode(decoder=inference_decoder, maximum_iterations=50)
+              - BasicDecoder+GreedyEmbeddingHelper if beam_search else BeamSearchDecoder
+        - output_layer = tf.layers.Dense
+        - build_decoder_cell()
+          - decoder_cell.zero_state
+            - batch_size = self.batch_size if not self.beam_search else self.batch_size * self.beam_size
+            - AttentionWrapper
+              - create_rnn_cell
+              - BahdanauAttention
+                - tile_batch if self.beam_search
+                - nest.map_structure if self.beam_search     
     - def train(self, batch):
       - _, loss, summary = self.sess.run([self.train_op, self.loss, self.summary_op], feed_dict=feed_dict)
     - def eval(self, batch):

@@ -1,3 +1,11 @@
+## 2018-08-10
+1. build test environment
+- installed cuda9.0+cudnn7.1+tensorflow-gpu1.9 on my laboratory's desktop computer whose Graphics cards model is GTX1050
+- run the program in my card,i found that the batch_size can't be set too large,otherwise, it will crash
+- the card is not very good,but it's enough anyway.
+2. have a visit to meituandianping
+- met Mr Xie,who is in my same laboratory but a year ahead and worked there
+- i didn't want to listen to the speech,how about you?
 ## 2018-08-09
 1. seq2seq1.0
 - data_helper.py

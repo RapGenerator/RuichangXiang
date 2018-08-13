@@ -1,6 +1,6 @@
 ## 2018-08-13     
-1.ask  for sun,lu et al. about the seq2seq program                     
-2.After so much time,I understand almost every function in the program what it's doing,but some details remained unknown.
+1.Asked for sun and lu et al. about the seq2seq program                     
+2.After so much time,I understand almost what every function is doing in the program,but some details remained unknown.
 ## 2018-08-12         
 None
 ## 2018-08-11      

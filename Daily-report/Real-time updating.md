@@ -1,3 +1,10 @@
+## 2018-08-13     
+1.ask  for sun,lu et al. about the seq2seq program
+2.After so much time,I understand almost every function in the program what it's doing,but some details remained unknown.
+## 2018-08-12         
+None
+## 2018-08-11      
+None
 ## 2018-08-10
 1. build test environment
 - installed cuda9.0+cudnn7.1+tensorflow-gpu1.9 on my laboratory's desktop computer whose Graphics cards model is GTX1050

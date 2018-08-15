@@ -1,7 +1,7 @@
 ## 2018-08-14
-1.crawel lyric_words program
-3.handle rap-data program
-2.crawel topic_words program
+1.crawel lyric_words program               
+3.handle rap-data program              
+2.crawel topic_words program                     
 ## 2018-08-13     
 1.Asked for sun and lu et al. about the seq2seq program                     
 2.After so much time,I understand almost what every function is doing in the program,but some details remained unknown.

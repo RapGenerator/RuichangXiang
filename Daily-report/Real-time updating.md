@@ -1,7 +1,17 @@
+## 2018-08-17
+1. Ask for shi/lu the tf.shape problem,and wang.tf.shape(2,) tells us the dimension of the tensor is 2       
+2. Debugging is intersting          
+## 2018-08-16                  
+1. Learn to deal with last data.csv given by derui and organize the program structure                 
+2. Ask for pang for the debug in the topic_rnn program                    
+## 2018-08-15
+1. Ask for shi/lu some problems about the crawl program           
+2. It's so many forture to learn for me,for example, your program in github
+3. I found i was forgettable,right?
 ## 2018-08-14
-1.crawel lyric_words program               
-3.handle rap-data program              
-2.crawel topic_words program                     
+1.Understand crawel lyric_words program               
+2.Understand handle rap-data program              
+3.Understand crawel topic_words program                     
 ## 2018-08-13     
 1.Asked for sun and lu et al. about the seq2seq program                     
 2.After so much time,I understand almost what every function is doing in the program,but some details remained unknown.

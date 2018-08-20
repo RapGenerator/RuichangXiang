@@ -5,7 +5,7 @@
    - the data is not good really,the line'这是""J"" to the ""R"" from the ""F"" to the ""O"" "" G"""' sequence_length is 47,most of it is '“',i think our team's final data also has this line and other bad lines we didn't find
    - the rnn program is simple,it has one rnn
    - compare rnn with sequence2sequence, i find the seq2seq has two rnn, which is so important
-   - in the rnn's training section,the input is the sequence, the formal target word won't be transmitted to the input, i think this is another important factor for the bad performance.
+   - in the rnn's training section,the input is the sequence, the formal target word won't be transmitted to the input(not like the seq2seq's decoder,traininghelper can do this), i think this is another important factor for the bad performance.
 ## 2018-08-19         
 None
 ## 2018-08-18     

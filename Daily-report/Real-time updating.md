@@ -1,3 +1,15 @@
+## 2018-08-20       
+1. the topic-generation program with pad is finished, but the loss is so big
+2. the predicting words's Front part is good,for example‘满城风雨’,but the back front is very bad
+3. i analyse the effect,found several possible factors:
+   - the data is not good really,the line'这是""J"" to the ""R"" from the ""F"" to the ""O"" "" G"""' sequence_length is 47,most of it is '“',i think our team's final data also has this line and other bad lines we didn't find
+   - the rnn program is simple,it has one rnn
+   - compare rnn with sequence2sequence, i find the seq2seq has two rnn, which is so important
+   - in the rnn's training section,the input is the sequence, the formal target word won't be transmitted to the input, i think this is another important factor for the bad performance.
+## 2018-08-19         
+None
+## 2018-08-18     
+None
 ## 2018-08-17
 1. Ask for shi/lu the tf.shape problem,and wang.tf.shape(2,) tells us the dimension of the tensor is 2       
 2. Debugging is intersting          
